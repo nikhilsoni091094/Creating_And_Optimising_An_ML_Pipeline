@@ -9,11 +9,9 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 
-1) Summary
-
 The target variable here was to predict whether the customer will be interested in buying a product offered to them across marketing campaigns. The examples of independent variables are age, marital status, education, current loans and housing. 
 
-2) Approach
+- Approach:-
 
 We have to use both Azure ML Studio HyperDrive and Azure AutoML to build upon a model and compare between the two approaches.
 
@@ -21,26 +19,21 @@ The best performing model was a VotingEnsemble with an Accuracy of 0.9171 , this
 
 ## Scikit-learn Pipeline
 
-1) Pipeline details
+- Pipeline details :-
 
 Architecture: Virtual Machine General Purpose CPU Cluster Compute D-Series V2
-
 Data: CSV Format, 21 columns, 32,950 data rows. The is loaded using a TabularDatasetFactory class, to acqurate the result the is cleaned using the function “clean_data” which is part of the script train.py
-
 Classification algorithm: We use a Scikit-learn Logistic Regression Model with a parameter sampler
-
 Hyperparameters: “C” which is the regularization parameter, “max-iter” which define the maximum number of iterations allowed
 
-2) How to choose a parameter sampler
+- Choosing a parameter sampler :-
 
 We have used the RandomParameterSampling as parameter sampler.
-
 ps = RandomParameterSampling( { '--C': uniform(0.05, 1), '--max_iter': choice(10, 30, 50, 70, 90) } )
 
-3) How to choose an early stopping policy
+- How to choose an early stopping policy :-
 
 We have used BanditPolicy as an early stopping criteria.
-
 policy = BanditPolicy(evaluation_interval=2, slack_factor=0.1)
 
 ## AutoML
