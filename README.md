@@ -38,12 +38,12 @@ policy = BanditPolicy(evaluation_interval=2, slack_factor=0.1)
 
 ## AutoML
 
+Automated machine learning, also referred to as automated ML or AutoML, is the process of automating the time consuming, iterative tasks of machine learning model development. It allows data scientists, analysts, and developers to build ML models with high scale, efficiency, and productivity all while sustaining model quality.
+
 ## Pipeline comparison
-**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+
+The test accuracy obtained by HyperDrive Experiment was 0.9146181082 whereas the experiment based on AutoML was 0.9171 using VotingEnsemble as the best algorithm, both of the accuracies are practically the same but, AutoML performs a little bit better because it had an array of algorithms to work upon with different pipeline parameters.
 
 ## Future work
-**What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
-## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
+I would like to run the AutoML for extensive amounts of time in order to find out if there is any scope of improvement in the overall accuracy. I would also like to play out with different configurations of the AutoML as well.
